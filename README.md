@@ -3,7 +3,7 @@
 ## Pzzebieg zadania
 1. Utworzenie sieci mostkowej lab11net:
 ```bash
-  docker network create –driver bridge lab11net
+  docker network create –-driver bridge lab11net
   ```
 ![Screen](lab11_s1.png)
 
@@ -40,7 +40,7 @@ Wykonanie poleceń w terminalu:
   type "%USERPROFILE%\lab11\logs\web1\access.log"
   ```
 ```bash
-  "%USERPROFILE%\lab11\logs\web1\error.log"
+  type "%USERPROFILE%\lab11\logs\web1\error.log"
   ```
 Podfoldery i pliki logów:
 ![Screen](lab11_s5.png)
