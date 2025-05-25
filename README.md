@@ -5,7 +5,7 @@
 ```bash
   docker network create –driver bridge lab11net
   ```
-![Screen](lab11_s1.PNG)
+![Screen](lab11_s1.png)
 
 2. Utworzenie poszczególnych kontenerów web1, web2, web3 z podłączeniem do sieci lab11net,
 zmapowaniem na różne porty dla hostów oraz podpięcie katalogów z logami i stroną html do nginx.
@@ -23,17 +23,17 @@ web3:
   docker run --rm -d --name web3 --network lab11net -p 8082:80 --mount type=bind,source="%USERPROFILE%\lab11\html\web3",target=/usr/share/nginx/html,readonly --mount type=bind,source="%USERPROFILE%\lab11\logs\web3",target=/var/log/nginx nginx:latest
   ```
 Wykonanie poleceń w terminalu:
-![Screen](lab11_s2.PNG)
+![Screen](lab11_s2.png)
 
 ## Potwiedzenie poprawności rozwiązania
 1. Potwierdzenie działania kontenerów:
 ```bash
   docker ps --filter "name=web"
   ```
-![Screen](lab11_s4.PNG)
+![Screen](lab11_s4.png)
 
 2. Potwierdzenie działania stron za pomocą polecenia curl:
-![Screen](lab11_s3.PNG)
+![Screen](lab11_s3.png)
 
 3. Podejrzenie logów serwera na hoście za pomocą polecenia type, np.:
 ```bash
@@ -43,9 +43,9 @@ Wykonanie poleceń w terminalu:
   "%USERPROFILE%\lab11\logs\web1\error.log"
   ```
 Podfoldery i pliki logów:
-![Screen](lab11_s5.PNG)
+![Screen](lab11_s5.png)
 
 Porównanie plików access.log pomiędzy kontenerami:
-![Screen](lab11_s6.PNG)
+![Screen](lab11_s6.png)
 
   
